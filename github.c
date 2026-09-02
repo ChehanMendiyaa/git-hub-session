@@ -5,7 +5,7 @@
 int main() {
     srand(time(NULL));
     int randomNum = rand() % 3 + 1;
-    int userChoice = 0;  // ✓ Fixed: use 0 instead of '\0'
+    int userChoice = 0;  
 
     printf("----Welcome to the Rock paper scissors Game---- \n");
     printf("Choose An Option \n");
@@ -15,7 +15,7 @@ int main() {
     printf("Enter Your Choice: ");
     scanf("%d", &userChoice);
 
-    // Show what computer chose
+    
     printf("\nComputer chose: ");
     if (randomNum == 1) printf("Rock\n");
     else if (randomNum == 2) printf("Paper\n");
@@ -27,7 +27,7 @@ int main() {
     else if (userChoice == 3) printf("Scissors\n");
     else printf("Invalid choice!\n");
 
-    // Check for valid input first
+    
     if (userChoice < 1 || userChoice > 3) {
         printf("Invalid choice! Please choose 1, 2, or 3.\n");
     } else if (userChoice == randomNum) {
